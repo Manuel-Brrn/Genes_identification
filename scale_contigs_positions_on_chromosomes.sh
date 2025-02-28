@@ -48,6 +48,11 @@ while read -r line; do
 
 done < "$tajima_bed"
 
+###### delete la colonne en trop
+
+cut -f1,3,4 scaled_low_tajima_urartu.bed > scaled_low_tajima_urartu_filtered.bed
+
+
 echo "Script completed for all lines of $output_bed"
 
 
